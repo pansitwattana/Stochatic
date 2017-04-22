@@ -36,8 +36,8 @@ for E = 0.1:0.1:15.0
    pe(count) = percentError(2);
    count = count + 1;
 end
+
 E = 0.1:0.1:15.0;
-plot(E,pe,E,pe2)
+plot(E,log(pe));
 xlabel('The signal energy E')
-ylabel('The probability of error')
-legend('Base on r1, r2, r3','Base on only r1')
+ylabel('Log of the probability of error')
