@@ -45,5 +45,5 @@ for E = 0.1:0.1:15.0
 end
 E = 0.1:0.1:15.0;
 plot(E,pe,'color','r'); hold on;
-plot(E,pe2,'color','b');
+plot(E,pe2),'color','b');
 
