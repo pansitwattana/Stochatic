@@ -37,4 +37,6 @@ for E = 0.1:0.1:15.0
    count = count + 1;
 end
 E = 0.1:0.1:15.0;
-plot(E,log(pe),'color','r');
+plot(E,log(pe));
+xlabel('The signal energy E')
+ylabel('Log of the probability of error')
