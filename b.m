@@ -44,6 +44,9 @@ for E = 0.1:0.1:15.0
    count = count + 1;
 end
 E = 0.1:0.1:15.0;
-plot(E,pe,'color','r'); hold on;
-plot(E,pe2),'color','b');
+plot(E,pe,E,pe2)
+xlabel('The signal energy E')
+ylabel('The probability of error')
+legend('Base on r1, r2, r3','Base on only r1')
+
 
