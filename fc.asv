@@ -49,9 +49,9 @@ for E = 0.1:0.1:15.0
    count = count + 1;
 end
 E = 0.1:0.1:15.0;
-plot(E,log10(pe))
+plot(E,log10(pe),'-s',E,log10(pe2),'-s')
 grid on
 xlabel('The signal energy E')
 ylabel('The probability of error')
-legend('Arbitrary Decision')
+legend('Arbitrary Decision','Optimum Decision')
 

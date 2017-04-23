@@ -53,4 +53,4 @@ E = 0.1:0.1:15.0;
 plot(E,log(pe),E,log(pe2))
 xlabel('The signal energy E')
 ylabel('The probability of error')
-legend('Optimum Decision','Arbitrary Decision')
+legend('Arbitrary Decision','Optimum Decision')

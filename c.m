@@ -37,6 +37,7 @@ for E = 0.1:0.1:15.0
    count = count + 1;
 end
 E = 0.1:0.1:15.0;
-plot(E,log(pe))
+plot(E,log10(pe))
+grid on
 xlabel('The signal energy E')
 ylabel('log of the probability of error')
