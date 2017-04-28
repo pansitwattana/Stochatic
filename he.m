@@ -1,9 +1,9 @@
 msgCount = 500000;
 
-p = 0.5;
+p = 0.75;
 var1 = 1;
-var2 = 1;
-var3 = 1;
+var2 = 2;
+var3 = 4;
 
 covar1 = 0.3;
 covar2 = 0.4;
@@ -14,18 +14,8 @@ sigma = [var1, covar1, covar2;
         covar2, covar3, var3];
 
 nrcv = 3;
-rho = [1 0.5 0.5; 0.5 1 0.5; 0.5 0.5 1];
-for i = 1:nrcv
-    for j = 1:nrcv
-        if i ~= j
-            sigma(i, j) = rho(i, j) * sigma(i, i) * sigma(j, j);
-        end
-    end
-end
-w = 2 * (rho(1,2)^2 + rho(1,3)^2 + rho(2,3)^2 - 2*rho(1,2)*rho(1,3)*rho(2,3) - 1);
-a = [rho(2,3)^2-1, rho(1,3)^2-1, rho(1,2)^2-1, rho(1,2)-rho(1,3)*rho(2,3), rho(1,3)-rho(1,2)*rho(2,3), rho(2,3) - rho(1,2)*rho(1,3)];
 
-N = mvnrnd([0 0 0], sigma, msgCount);
+N = mvnrnd(zeros(1,3), sigma, msgCount);
 n1 = N(:,1);
 n2 = N(:,2);
 n3 = N(:,3);
